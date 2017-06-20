@@ -18,7 +18,7 @@ IonicApp.run(function ($ionicPlatform) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
+    
     window.localStorage.setItem("uuid", device.uuid);
 
     var push = new Ionic.Push({

@@ -5,7 +5,7 @@
   </div>
   <ion-content class="margin">
     <div class="list">
-      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-repeat="item in resultList.data.success"  ng-click="goToDetail(item.code)">
+      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-click="goToDetail(item.code)" ng-repeat="item in resultList.data.success">
         <div class="row">
           <i class="icon ion-social-usd"></i>
           <div class="col col-33 text-left">
@@ -20,7 +20,7 @@
         </div>
         <i class="icon ion-ios-arrow-right"></i>  
       </a>
-      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-click="goToDetail(resultList.data.error[0].code)">
+      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-click="goToDetail(resultList.data.error[0].code)" ng-if="resultList.data.error[0].qty > 0">
         <div class="row">
           <i class="icon ion-social-usd"></i>
           <div class="col col-33 text-left">
