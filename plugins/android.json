@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.mirasense.scanditsdk.plugin": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.dealer.toa"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "1082197156242",
+            "PACKAGE_NAME": "com.dealer.toa"
+        }
+    },
+    "dependent_plugins": {}
+}
