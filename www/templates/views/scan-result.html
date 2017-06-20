@@ -1,0 +1,46 @@
+<ion-view ng-init="initResult()" view-title="Results" hide-nav-bar="true" cache-view="false">
+  <div class="bar bar-header bar-scan">
+    <div class="h1 title title-scan">Results</div>
+    <button class="button btn-scan" ng-click="done()">Done</button>
+  </div>
+  <ion-content class="margin">
+    <div class="list">
+      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-repeat="item in resultList.data.success"  ng-click="goToDetail(item.code)">
+        <div class="row">
+          <i class="icon ion-social-usd"></i>
+          <div class="col col-33 text-left">
+            {{item.value}}
+          </div>
+          <div class="col col-33 text-center">
+            {{item.qty}}
+          </div>
+          <div class="col col-33 text-right col-right">
+            {{item.total}}฿
+          </div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>  
+      </a>
+      <a class="item item-custom item-button-right item-icon-left item-icon-right" ng-click="goToDetail(resultList.data.error[0].code)">
+        <div class="row">
+          <i class="icon ion-social-usd"></i>
+          <div class="col col-33 text-left">
+            Fail
+          </div>
+          <div class="col col-33 text-center">
+            {{resultList.data.error[0].qty}}
+          </div>
+          <div class="col col-33 text-right col-right">
+            <i class="icon ion-android-cancel history-icon-list icon-cancel icon-fail"></i>  
+          </div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>  
+      </a>
+      <a class="item">
+        <div class="row">
+          <div class="col col-50 text-center"><b>Total</b></div>
+          <div class="col col-50 text-center"><b>{{resultList.total}}฿</b></div>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

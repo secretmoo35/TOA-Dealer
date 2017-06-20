@@ -1,0 +1,28 @@
+<ion-view ng-init="initKeepCoinDetail()" view-title="{{keepCoinMonth | date: 'MMM yyyy' }}" cache-view="false">
+  <ion-content>
+     <div class="list">
+        <a class="item item-icon-left" ng-repeat="item in keepCoinDetail.result">
+            <i class="icon ion-social-usd">
+                <p class="change-coin-detail">{{item.value}}฿</p>
+            </i>
+            <span class="item-note">
+            {{item.qty}} Coin
+            </span>
+            <br>
+            <span class="item-note">
+            {{item.totalamount}}฿
+            </span>
+        </a>
+        <a class="item">
+            <div class="row">
+                <div class="col col-50 text-center"><b>Total</b></div>
+                <div class="col col-50 text-center"><b>{{keepCoinDetail.total | number }}฿</b></div>
+            </div>
+            <!--<div class="row">
+                <div class="col col-50 text-center icon-pass"><b>Receive</b></div>
+                <div class="col col-50 text-center icon-pass"><b>1,000฿</b></div>
+            </div>-->
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

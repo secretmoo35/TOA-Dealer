@@ -1,0 +1,19 @@
+<ion-view >
+  <ion-tabs class="tabs-icon-top tabs-striped tabs-background-light tabs-color-positive shop-tabs">
+
+    <ion-tab title="News" icon-on="ion-speakerphone" icon-off="ion-speakerphone" ng-click="openNews()">
+      <ion-nav-view name="tab-news"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Scanner" icon-on="ion-qr-scanner" icon-off="ion-qr-scanner" ng-click="openScanner()">
+      <ion-nav-view name="tab-scanner"></ion-nav-view>
+    </ion-tab>
+
+    <ion-floating-menu menu-icon="ion-qr-scanner" menu-open-icon="ion-qr-scanner" badge="{{data.length}}" ng-click="openScanner()">
+    </ion-floating-menu>
+    
+    <ion-tab title="History" icon-on="ion-android-calendar" icon-off="ion-calendar" ng-click="openHistory()">
+      <ion-nav-view name="tab-history"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view ng-init="initChangeCoinList()" cache-view="false" view-title="Change Coin">
+  <ion-content>
+     <div class="list">
+      <a class="item item-custom item-button-right item-icon-right" ng-click="goToChangeDetail(item.date)" ng-repeat="item in changeCoinList">
+        <div class="row">
+          <div class="col">
+            {{parseDate(item.date) | date:"dd/MM/yyyy"}}
+          </div>
+          <div class="col text-right col-right">
+            {{item.total | number}}
+          </div>
+        </div>
+        <i class="icon ion-checkmark-circled history-icon-list icon-pass " ng-if="item.status !=''"></i>  
+        <i class="icon ion-android-cancel history-icon-list icon-cancel " ng-if="item.status == ''"></i>  
+        <i class="icon ion-ios-arrow-right"></i>  
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

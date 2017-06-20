@@ -1,0 +1,28 @@
+<!-- ng-init="openScanQR()"-->
+<ion-view ng-init="init()" view-title="QR Code" hide-nav-bar="true" cache-view="false">
+  <div class="bar bar-header bar-scan">
+    <button class="button btn-scan" ng-click="inputSerialNumber()">SN</button>
+    <div class="h1 title title-scan">QR Code</div>
+    <button class="button btn-scan" ng-click="sendSerialNumber()" ng-disabled="scanditOn">Submit</button>
+  </div>
+  <ion-content class="margin">
+    <div class="row" ng-show="scanditOn">
+      <div class="col col-80 text-left">
+        <div class="button-bar">
+          <a class="button" ng-class="{'active': QRScan}" ng-click="openScanSN()" ng-disabled="SNScan"><i class="ion-ios-reverse-camera icon-scan"></i> SN</a>
+          <a class="button" ng-class="{'active': SNScan}" ng-click="openScanQR()" ng-disabled="QRScan"><i class="ion-ios-reverse-camera icon-scan"></i> QR</a>
+        </div>
+      </div>
+      <div class="col col-20 text-right">
+        <button class="button" ng-click="closeScan()"><i class="ion-close-round icon-scan"></i></button>
+      </div>
+    </div>
+    <ion-scroll ng-class="{'margin-scanon scroll-scanlist-shot' : scanditOn}" scrollY="true">
+      <ul class="list">
+            <li class="item" ng-repeat="item in data">
+              {{item.data}}
+            </li>
+        </ul>
+    </ion-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view ng-init="initNews()" view-title="News & Promotions">
+  <ion-content>
+    <div class="list">
+      <!--ng-click="goDetail()"-->
+      <a class="item item-thumbnail-left item-thumbnail-custom" ng-click="goDetail(item)" ng-repeat="item in newsPromotion">
+        <img class="image-thumbnail" ng-if="item.imageURL.length > 0" ng-src="{{item.imageURL[0]}}">        
+        <img class="image-thumbnail" ng-if="item.imageURL.length === 0" src="img/no_image.png">
+        <h2>{{item.name}}</h2>
+        <p>{{item.description}}</p>
+      </a>
+  </div>
+  </ion-content>
+</ion-view>

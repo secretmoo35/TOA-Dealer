@@ -1,0 +1,20 @@
+<ion-view ng-init="initNewsDetail()" view-title="Detail">
+  <ion-content>
+    <div class="list card">
+        <div class="item item-body">
+          <div class="text-center">
+            <ion-slide-box class="text-center" ng-if="detail.imageURL.length > 0" on-slide-changed="slideHasChanged($index)">
+              <ion-slide ng-repeat="image in detail.imageURL">
+                <img class="full-image-custom" ng-src="{{image}}">
+              </ion-slide>
+            </ion-slide-box>
+            <img class="full-image-custom" ng-if="detail.imageURL.length === 0" src="img/ionic.png">
+            <h2>{{detail.name}}</h2>
+          </div>
+          <p>
+            {{detail.description}}
+          </p>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

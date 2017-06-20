@@ -1,0 +1,28 @@
+<ion-view ng-init="initDescription()" view-title="Description">
+  <ion-content>
+    <div class="list">
+      <a class="item item-custom" ng-repeat="item in dataDescription">
+        <div class="row">
+          <div class="col col-20 text-left">
+              {{item.qr != '' ? 'QR' : 'SN'}}
+          </div>
+          <div class="col col-70 text-left">
+              {{item.qr}} {{item.sn}}
+          </div>
+          <div class="col col-10 text-right col-right">
+              {{item.value != '' ? item.value + '฿' : ''}}
+            <i class="icon ion-android-cancel history-icon-list icon-cancel icon-fail" ng-if="item.status !== 'success'"></i>  
+          </div>
+        </div> 
+        <div class="row" ng-if="item.status !== 'success'">
+          <div class="col col-20 text-left icon-cancel">
+              Remark 
+          </div>
+          <div class="col col-80 text-left icon-cancel">
+              {{item.status}}
+          </div>
+        </div> 
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
